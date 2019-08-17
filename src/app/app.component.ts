@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+// @ts-ignore
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Gallery';
+  title = 'ngmodule-dependency-injection';
+  constructor(public authService: AuthService) {}
 }
